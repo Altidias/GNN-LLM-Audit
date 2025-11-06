@@ -10,7 +10,11 @@ from typing import Dict, Any, Optional, Set
 from slither import Slither
 from slither.core.declarations import Contract, Function
 from slither.core.cfg.node import Node, NodeType
-from solc_version_manager import SolcVersionManager
+
+try:
+    from .solc_version_manager import SolcVersionManager
+except ImportError:
+    from solc_version_manager import SolcVersionManager
 
 logger = logging.getLogger(__name__)
 
@@ -153,6 +157,21 @@ class CFGGenerator:
             node_attrs["can_reenter"] = node.can_reenter()
         if hasattr(node, 'can_send_eth') and callable(node.can_send_eth):
             node_attrs["can_send_eth"] = node.can_send_eth()
+
+        # Detect guard conditions (require/assert/revert)
+        expression_str = str(node.expression).lower() if node.expression else ""
+        node_attrs["is_guard"] = False
+        node_attrs["guard_type"] = None
+
+        if "require(" in expression_str:
+            node_attrs["is_guard"] = True
+            node_attrs["guard_type"] = "require"
+        elif "assert(" in expression_str:
+            node_attrs["is_guard"] = True
+            node_attrs["guard_type"] = "assert"
+        elif "revert(" in expression_str:
+            node_attrs["is_guard"] = True
+            node_attrs["guard_type"] = "revert"
 
         self.graph.add_node(node_id, **node_attrs)
 
