@@ -1,0 +1,377 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "node_type": "Contract",
+      "name": "VulnerableBank",
+      "kind": "contract",
+      "is_interface": false,
+      "is_library": false,
+      "id": "contract_VulnerableBank"
+    },
+    {
+      "node_type": "StateVariable",
+      "name": "balances",
+      "var_type": "mapping(address => uint256)",
+      "visibility": "public",
+      "is_constant": false,
+      "is_immutable": false,
+      "id": "state_var_VulnerableBank_balances"
+    },
+    {
+      "node_type": "StateVariable",
+      "name": "owner",
+      "var_type": "address",
+      "visibility": "public",
+      "is_constant": false,
+      "is_immutable": false,
+      "id": "state_var_VulnerableBank_owner"
+    },
+    {
+      "node_type": "StateVariable",
+      "name": "totalDeposits",
+      "var_type": "uint256",
+      "visibility": "public",
+      "is_constant": false,
+      "is_immutable": false,
+      "id": "state_var_VulnerableBank_totalDeposits"
+    },
+    {
+      "node_type": "Function",
+      "name": "constructor",
+      "visibility": "public",
+      "is_constructor": true,
+      "is_fallback": false,
+      "is_receive": false,
+      "payable": false,
+      "view": false,
+      "pure": false,
+      "signature": "constructor() returns()",
+      "id": "func_VulnerableBank_constructor_constructor() returns()"
+    },
+    {
+      "node_type": "Function",
+      "name": "withdraw",
+      "visibility": "public",
+      "is_constructor": false,
+      "is_fallback": false,
+      "is_receive": false,
+      "payable": false,
+      "view": false,
+      "pure": false,
+      "signature": "withdraw(uint256) returns()",
+      "id": "func_VulnerableBank_withdraw_withdraw(uint256) returns()"
+    },
+    {
+      "node_type": "Parameter",
+      "name": "amount",
+      "param_type": "uint256",
+      "id": "param_func_VulnerableBank_withdraw_withdraw(uint256) returns()_amount"
+    },
+    {
+      "node_type": "LocalVariable",
+      "name": "success",
+      "var_type": "bool",
+      "id": "local_var_func_VulnerableBank_withdraw_withdraw(uint256) returns()_success"
+    },
+    {
+      "node_type": "Function",
+      "name": "deposit",
+      "visibility": "public",
+      "is_constructor": false,
+      "is_fallback": false,
+      "is_receive": false,
+      "payable": true,
+      "view": false,
+      "pure": false,
+      "signature": "deposit() returns()",
+      "id": "func_VulnerableBank_deposit_deposit() returns()"
+    },
+    {
+      "node_type": "Function",
+      "name": "calculateBonus",
+      "visibility": "public",
+      "is_constructor": false,
+      "is_fallback": false,
+      "is_receive": false,
+      "payable": false,
+      "view": true,
+      "pure": true,
+      "signature": "calculateBonus(uint256,uint256) returns(uint256)",
+      "id": "func_VulnerableBank_calculateBonus_calculateBonus(uint256,uint256) returns(uint256)"
+    },
+    {
+      "node_type": "Parameter",
+      "name": "balance",
+      "param_type": "uint256",
+      "id": "param_func_VulnerableBank_calculateBonus_calculateBonus(uint256,uint256) returns(uint256)_balance"
+    },
+    {
+      "node_type": "Parameter",
+      "name": "multiplier",
+      "param_type": "uint256",
+      "id": "param_func_VulnerableBank_calculateBonus_calculateBonus(uint256,uint256) returns(uint256)_multiplier"
+    },
+    {
+      "node_type": "ReturnParameter",
+      "name": "",
+      "param_type": "uint256",
+      "id": "return_func_VulnerableBank_calculateBonus_calculateBonus(uint256,uint256) returns(uint256)_"
+    },
+    {
+      "node_type": "LocalVariable",
+      "name": "bonus",
+      "var_type": "uint256",
+      "id": "local_var_func_VulnerableBank_calculateBonus_calculateBonus(uint256,uint256) returns(uint256)_bonus"
+    },
+    {
+      "node_type": "Function",
+      "name": "updateTotalDeposits",
+      "visibility": "public",
+      "is_constructor": false,
+      "is_fallback": false,
+      "is_receive": false,
+      "payable": false,
+      "view": false,
+      "pure": false,
+      "signature": "updateTotalDeposits(uint256) returns()",
+      "id": "func_VulnerableBank_updateTotalDeposits_updateTotalDeposits(uint256) returns()"
+    },
+    {
+      "node_type": "Parameter",
+      "name": "newTotal",
+      "param_type": "uint256",
+      "id": "param_func_VulnerableBank_updateTotalDeposits_updateTotalDeposits(uint256) returns()_newTotal"
+    },
+    {
+      "node_type": "Function",
+      "name": "emergencyWithdraw",
+      "visibility": "public",
+      "is_constructor": false,
+      "is_fallback": false,
+      "is_receive": false,
+      "payable": false,
+      "view": false,
+      "pure": false,
+      "signature": "emergencyWithdraw() returns()",
+      "id": "func_VulnerableBank_emergencyWithdraw_emergencyWithdraw() returns()"
+    },
+    {
+      "node_type": "LocalVariable",
+      "name": "success",
+      "var_type": "bool",
+      "id": "local_var_func_VulnerableBank_emergencyWithdraw_emergencyWithdraw() returns()_success"
+    },
+    {
+      "node_type": "LocalVariable",
+      "name": "balance",
+      "var_type": "uint256",
+      "id": "local_var_func_VulnerableBank_emergencyWithdraw_emergencyWithdraw() returns()_balance"
+    },
+    {
+      "node_type": "Function",
+      "name": "getBalance",
+      "visibility": "public",
+      "is_constructor": false,
+      "is_fallback": false,
+      "is_receive": false,
+      "payable": false,
+      "view": true,
+      "pure": false,
+      "signature": "getBalance(address) returns(uint256)",
+      "id": "func_VulnerableBank_getBalance_getBalance(address) returns(uint256)"
+    },
+    {
+      "node_type": "Parameter",
+      "name": "user",
+      "param_type": "address",
+      "id": "param_func_VulnerableBank_getBalance_getBalance(address) returns(uint256)_user"
+    },
+    {
+      "node_type": "ReturnParameter",
+      "name": "",
+      "param_type": "uint256",
+      "id": "return_func_VulnerableBank_getBalance_getBalance(address) returns(uint256)_"
+    },
+    {
+      "node_type": "Function",
+      "name": "canWithdraw",
+      "visibility": "public",
+      "is_constructor": false,
+      "is_fallback": false,
+      "is_receive": false,
+      "payable": false,
+      "view": true,
+      "pure": false,
+      "signature": "canWithdraw(address,uint256) returns(bool)",
+      "id": "func_VulnerableBank_canWithdraw_canWithdraw(address,uint256) returns(bool)"
+    },
+    {
+      "node_type": "Parameter",
+      "name": "user",
+      "param_type": "address",
+      "id": "param_func_VulnerableBank_canWithdraw_canWithdraw(address,uint256) returns(bool)_user"
+    },
+    {
+      "node_type": "Parameter",
+      "name": "amount",
+      "param_type": "uint256",
+      "id": "param_func_VulnerableBank_canWithdraw_canWithdraw(address,uint256) returns(bool)_amount"
+    },
+    {
+      "node_type": "ReturnParameter",
+      "name": "",
+      "param_type": "bool",
+      "id": "return_func_VulnerableBank_canWithdraw_canWithdraw(address,uint256) returns(bool)_"
+    },
+    {
+      "node_type": "Event",
+      "name": "Deposit",
+      "id": "event_VulnerableBank_Deposit"
+    },
+    {
+      "node_type": "Event",
+      "name": "Withdrawal",
+      "id": "event_VulnerableBank_Withdrawal"
+    }
+  ],
+  "links": [
+    {
+      "edge_type": "has_state_var",
+      "source": "contract_VulnerableBank",
+      "target": "state_var_VulnerableBank_balances"
+    },
+    {
+      "edge_type": "has_state_var",
+      "source": "contract_VulnerableBank",
+      "target": "state_var_VulnerableBank_owner"
+    },
+    {
+      "edge_type": "has_state_var",
+      "source": "contract_VulnerableBank",
+      "target": "state_var_VulnerableBank_totalDeposits"
+    },
+    {
+      "edge_type": "has_function",
+      "source": "contract_VulnerableBank",
+      "target": "func_VulnerableBank_constructor_constructor() returns()"
+    },
+    {
+      "edge_type": "has_function",
+      "source": "contract_VulnerableBank",
+      "target": "func_VulnerableBank_withdraw_withdraw(uint256) returns()"
+    },
+    {
+      "edge_type": "has_function",
+      "source": "contract_VulnerableBank",
+      "target": "func_VulnerableBank_deposit_deposit() returns()"
+    },
+    {
+      "edge_type": "has_function",
+      "source": "contract_VulnerableBank",
+      "target": "func_VulnerableBank_calculateBonus_calculateBonus(uint256,uint256) returns(uint256)"
+    },
+    {
+      "edge_type": "has_function",
+      "source": "contract_VulnerableBank",
+      "target": "func_VulnerableBank_updateTotalDeposits_updateTotalDeposits(uint256) returns()"
+    },
+    {
+      "edge_type": "has_function",
+      "source": "contract_VulnerableBank",
+      "target": "func_VulnerableBank_emergencyWithdraw_emergencyWithdraw() returns()"
+    },
+    {
+      "edge_type": "has_function",
+      "source": "contract_VulnerableBank",
+      "target": "func_VulnerableBank_getBalance_getBalance(address) returns(uint256)"
+    },
+    {
+      "edge_type": "has_function",
+      "source": "contract_VulnerableBank",
+      "target": "func_VulnerableBank_canWithdraw_canWithdraw(address,uint256) returns(bool)"
+    },
+    {
+      "edge_type": "has_event",
+      "source": "contract_VulnerableBank",
+      "target": "event_VulnerableBank_Deposit"
+    },
+    {
+      "edge_type": "has_event",
+      "source": "contract_VulnerableBank",
+      "target": "event_VulnerableBank_Withdrawal"
+    },
+    {
+      "edge_type": "has_param",
+      "source": "func_VulnerableBank_withdraw_withdraw(uint256) returns()",
+      "target": "param_func_VulnerableBank_withdraw_withdraw(uint256) returns()_amount"
+    },
+    {
+      "edge_type": "has_local_var",
+      "source": "func_VulnerableBank_withdraw_withdraw(uint256) returns()",
+      "target": "local_var_func_VulnerableBank_withdraw_withdraw(uint256) returns()_success"
+    },
+    {
+      "edge_type": "has_param",
+      "source": "func_VulnerableBank_calculateBonus_calculateBonus(uint256,uint256) returns(uint256)",
+      "target": "param_func_VulnerableBank_calculateBonus_calculateBonus(uint256,uint256) returns(uint256)_balance"
+    },
+    {
+      "edge_type": "has_param",
+      "source": "func_VulnerableBank_calculateBonus_calculateBonus(uint256,uint256) returns(uint256)",
+      "target": "param_func_VulnerableBank_calculateBonus_calculateBonus(uint256,uint256) returns(uint256)_multiplier"
+    },
+    {
+      "edge_type": "returns",
+      "source": "func_VulnerableBank_calculateBonus_calculateBonus(uint256,uint256) returns(uint256)",
+      "target": "return_func_VulnerableBank_calculateBonus_calculateBonus(uint256,uint256) returns(uint256)_"
+    },
+    {
+      "edge_type": "has_local_var",
+      "source": "func_VulnerableBank_calculateBonus_calculateBonus(uint256,uint256) returns(uint256)",
+      "target": "local_var_func_VulnerableBank_calculateBonus_calculateBonus(uint256,uint256) returns(uint256)_bonus"
+    },
+    {
+      "edge_type": "has_param",
+      "source": "func_VulnerableBank_updateTotalDeposits_updateTotalDeposits(uint256) returns()",
+      "target": "param_func_VulnerableBank_updateTotalDeposits_updateTotalDeposits(uint256) returns()_newTotal"
+    },
+    {
+      "edge_type": "has_local_var",
+      "source": "func_VulnerableBank_emergencyWithdraw_emergencyWithdraw() returns()",
+      "target": "local_var_func_VulnerableBank_emergencyWithdraw_emergencyWithdraw() returns()_success"
+    },
+    {
+      "edge_type": "has_local_var",
+      "source": "func_VulnerableBank_emergencyWithdraw_emergencyWithdraw() returns()",
+      "target": "local_var_func_VulnerableBank_emergencyWithdraw_emergencyWithdraw() returns()_balance"
+    },
+    {
+      "edge_type": "has_param",
+      "source": "func_VulnerableBank_getBalance_getBalance(address) returns(uint256)",
+      "target": "param_func_VulnerableBank_getBalance_getBalance(address) returns(uint256)_user"
+    },
+    {
+      "edge_type": "returns",
+      "source": "func_VulnerableBank_getBalance_getBalance(address) returns(uint256)",
+      "target": "return_func_VulnerableBank_getBalance_getBalance(address) returns(uint256)_"
+    },
+    {
+      "edge_type": "has_param",
+      "source": "func_VulnerableBank_canWithdraw_canWithdraw(address,uint256) returns(bool)",
+      "target": "param_func_VulnerableBank_canWithdraw_canWithdraw(address,uint256) returns(bool)_user"
+    },
+    {
+      "edge_type": "has_param",
+      "source": "func_VulnerableBank_canWithdraw_canWithdraw(address,uint256) returns(bool)",
+      "target": "param_func_VulnerableBank_canWithdraw_canWithdraw(address,uint256) returns(bool)_amount"
+    },
+    {
+      "edge_type": "returns",
+      "source": "func_VulnerableBank_canWithdraw_canWithdraw(address,uint256) returns(bool)",
+      "target": "return_func_VulnerableBank_canWithdraw_canWithdraw(address,uint256) returns(bool)_"
+    }
+  ]
+}

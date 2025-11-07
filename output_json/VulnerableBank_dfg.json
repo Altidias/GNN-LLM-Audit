@@ -1,0 +1,831 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "node_type": "ContractScope",
+      "name": "VulnerableBank",
+      "label": "Contract: VulnerableBank",
+      "id": "contract_VulnerableBank"
+    },
+    {
+      "node_type": "Variable",
+      "var_kind": "state",
+      "name": "balances",
+      "var_type": "mapping(address => uint256)",
+      "is_storage": true,
+      "label": "state: balances",
+      "id": "var_VulnerableBank_state_balances_0"
+    },
+    {
+      "node_type": "Variable",
+      "var_kind": "state",
+      "name": "owner",
+      "var_type": "address",
+      "is_storage": true,
+      "label": "state: owner",
+      "id": "var_VulnerableBank_state_owner_1"
+    },
+    {
+      "node_type": "Variable",
+      "var_kind": "state",
+      "name": "totalDeposits",
+      "var_type": "uint256",
+      "is_storage": true,
+      "label": "state: totalDeposits",
+      "id": "var_VulnerableBank_state_totalDeposits_2"
+    },
+    {
+      "node_type": "FunctionScope",
+      "function_name": "constructor",
+      "label": "Function: constructor",
+      "id": "func_scope_VulnerableBank_constructor_1933629192976"
+    },
+    {
+      "node_type": "Variable",
+      "var_kind": "temporary",
+      "name": "msg.sender",
+      "var_type": "address",
+      "is_storage": false,
+      "label": "temporary: msg.sender",
+      "id": "var_VulnerableBank_constructor_temporary_msg.sender_4"
+    },
+    {
+      "node_type": "FunctionScope",
+      "function_name": "withdraw",
+      "label": "Function: withdraw",
+      "id": "func_scope_VulnerableBank_withdraw_1933629193296"
+    },
+    {
+      "node_type": "Variable",
+      "var_kind": "parameter",
+      "name": "amount",
+      "var_type": "uint256",
+      "is_storage": false,
+      "label": "parameter: amount",
+      "id": "var_VulnerableBank_withdraw_parameter_amount_5"
+    },
+    {
+      "node_type": "Variable",
+      "var_kind": "local",
+      "name": "success",
+      "var_type": "bool",
+      "is_storage": false,
+      "label": "local: success",
+      "id": "var_VulnerableBank_withdraw_local_success_6"
+    },
+    {
+      "node_type": "Variable",
+      "var_kind": "temporary",
+      "name": "TMP_0",
+      "var_type": "bool",
+      "is_storage": false,
+      "label": "temporary: TMP_0",
+      "id": "var_VulnerableBank_withdraw_temporary_TMP_0_9"
+    },
+    {
+      "node_type": "BinaryOperation",
+      "operation": "BinaryType.GREATER_EQUAL",
+      "label": "Op: BinaryType.GREATER_EQUAL",
+      "id": "op_VulnerableBank_withdraw_1_8"
+    },
+    {
+      "node_type": "Variable",
+      "var_kind": "temporary",
+      "name": "REF_0",
+      "var_type": "uint256",
+      "is_storage": false,
+      "label": "temporary: REF_0",
+      "id": "var_VulnerableBank_withdraw_temporary_REF_0_10"
+    },
+    {
+      "node_type": "FunctionCall",
+      "function": "unknown",
+      "call_type": "LowLevelCall",
+      "label": "Call: unknown",
+      "id": "op_VulnerableBank_withdraw_3_12"
+    },
+    {
+      "node_type": "Constant",
+      "value": "",
+      "var_type": "string",
+      "label": "Const: ",
+      "id": "const_VulnerableBank_withdraw_13"
+    },
+    {
+      "node_type": "Variable",
+      "var_kind": "temporary",
+      "name": "TUPLE_0",
+      "var_type": "[<slither.core.solidity_types.elementary_type.ElementaryType object at 0x000001C2355A4B40>, <slither.core.solidity_types.elementary_type.ElementaryType object at 0x000001C2355A4BB0>]",
+      "is_storage": false,
+      "label": "temporary: TUPLE_0",
+      "id": "var_VulnerableBank_withdraw_temporary_TUPLE_0_14"
+    },
+    {
+      "node_type": "Variable",
+      "var_kind": "temporary",
+      "name": "REF_2",
+      "var_type": "uint256",
+      "is_storage": false,
+      "label": "temporary: REF_2",
+      "id": "var_VulnerableBank_withdraw_temporary_REF_2_19"
+    },
+    {
+      "node_type": "BinaryOperation",
+      "operation": "BinaryType.SUBTRACTION",
+      "label": "Op: BinaryType.SUBTRACTION",
+      "id": "op_VulnerableBank_withdraw_5_18"
+    },
+    {
+      "node_type": "BinaryOperation",
+      "operation": "BinaryType.SUBTRACTION",
+      "label": "Op: BinaryType.SUBTRACTION",
+      "id": "op_VulnerableBank_withdraw_6_20"
+    },
+    {
+      "node_type": "FunctionScope",
+      "function_name": "deposit",
+      "label": "Function: deposit",
+      "id": "func_scope_VulnerableBank_deposit_1933629193616"
+    },
+    {
+      "node_type": "Variable",
+      "var_kind": "temporary",
+      "name": "TMP_4",
+      "var_type": "bool",
+      "is_storage": false,
+      "label": "temporary: TMP_4",
+      "id": "var_VulnerableBank_deposit_temporary_TMP_4_23"
+    },
+    {
+      "node_type": "BinaryOperation",
+      "operation": "BinaryType.GREATER",
+      "label": "Op: BinaryType.GREATER",
+      "id": "op_VulnerableBank_deposit_1_22"
+    },
+    {
+      "node_type": "Variable",
+      "var_kind": "temporary",
+      "name": "msg.value",
+      "var_type": "uint256",
+      "is_storage": false,
+      "label": "temporary: msg.value",
+      "id": "var_VulnerableBank_deposit_temporary_msg.value_24"
+    },
+    {
+      "node_type": "Constant",
+      "value": "0",
+      "var_type": "uint256",
+      "label": "Const: 0",
+      "id": "const_VulnerableBank_deposit_25"
+    },
+    {
+      "node_type": "Variable",
+      "var_kind": "temporary",
+      "name": "REF_3",
+      "var_type": "uint256",
+      "is_storage": false,
+      "label": "temporary: REF_3",
+      "id": "var_VulnerableBank_deposit_temporary_REF_3_29"
+    },
+    {
+      "node_type": "BinaryOperation",
+      "operation": "BinaryType.ADDITION",
+      "label": "Op: BinaryType.ADDITION",
+      "id": "op_VulnerableBank_deposit_2_28"
+    },
+    {
+      "node_type": "BinaryOperation",
+      "operation": "BinaryType.ADDITION",
+      "label": "Op: BinaryType.ADDITION",
+      "id": "op_VulnerableBank_deposit_3_30"
+    },
+    {
+      "node_type": "FunctionScope",
+      "function_name": "calculateBonus",
+      "label": "Function: calculateBonus",
+      "id": "func_scope_VulnerableBank_calculateBonus_1933629193936"
+    },
+    {
+      "node_type": "Variable",
+      "var_kind": "parameter",
+      "name": "balance",
+      "var_type": "uint256",
+      "is_storage": false,
+      "label": "parameter: balance",
+      "id": "var_VulnerableBank_calculateBonus_parameter_balance_32"
+    },
+    {
+      "node_type": "Variable",
+      "var_kind": "parameter",
+      "name": "multiplier",
+      "var_type": "uint256",
+      "is_storage": false,
+      "label": "parameter: multiplier",
+      "id": "var_VulnerableBank_calculateBonus_parameter_multiplier_33"
+    },
+    {
+      "node_type": "Variable",
+      "var_kind": "local",
+      "name": "bonus",
+      "var_type": "uint256",
+      "is_storage": false,
+      "label": "local: bonus",
+      "id": "var_VulnerableBank_calculateBonus_local_bonus_34"
+    },
+    {
+      "node_type": "Variable",
+      "var_kind": "temporary",
+      "name": "TMP_7",
+      "var_type": "uint256",
+      "is_storage": false,
+      "label": "temporary: TMP_7",
+      "id": "var_VulnerableBank_calculateBonus_temporary_TMP_7_36"
+    },
+    {
+      "node_type": "BinaryOperation",
+      "operation": "BinaryType.MULTIPLICATION",
+      "label": "Op: BinaryType.MULTIPLICATION",
+      "id": "op_VulnerableBank_calculateBonus_1_35"
+    },
+    {
+      "node_type": "Return",
+      "label": "Return",
+      "id": "op_VulnerableBank_calculateBonus_2_38"
+    },
+    {
+      "node_type": "FunctionScope",
+      "function_name": "updateTotalDeposits",
+      "label": "Function: updateTotalDeposits",
+      "id": "func_scope_VulnerableBank_updateTotalDeposits_1933630226512"
+    },
+    {
+      "node_type": "Variable",
+      "var_kind": "parameter",
+      "name": "newTotal",
+      "var_type": "uint256",
+      "is_storage": false,
+      "label": "parameter: newTotal",
+      "id": "var_VulnerableBank_updateTotalDeposits_parameter_newTotal_39"
+    },
+    {
+      "node_type": "FunctionScope",
+      "function_name": "emergencyWithdraw",
+      "label": "Function: emergencyWithdraw",
+      "id": "func_scope_VulnerableBank_emergencyWithdraw_1933630226832"
+    },
+    {
+      "node_type": "Variable",
+      "var_kind": "local",
+      "name": "balance",
+      "var_type": "uint256",
+      "is_storage": false,
+      "label": "local: balance",
+      "id": "var_VulnerableBank_emergencyWithdraw_local_balance_41"
+    },
+    {
+      "node_type": "Variable",
+      "var_kind": "local",
+      "name": "success",
+      "var_type": "bool",
+      "is_storage": false,
+      "label": "local: success",
+      "id": "var_VulnerableBank_emergencyWithdraw_local_success_42"
+    },
+    {
+      "node_type": "Variable",
+      "var_kind": "temporary",
+      "name": "TMP_8",
+      "var_type": "bool",
+      "is_storage": false,
+      "label": "temporary: TMP_8",
+      "id": "var_VulnerableBank_emergencyWithdraw_temporary_TMP_8_44"
+    },
+    {
+      "node_type": "BinaryOperation",
+      "operation": "BinaryType.EQUAL",
+      "label": "Op: BinaryType.EQUAL",
+      "id": "op_VulnerableBank_emergencyWithdraw_1_43"
+    },
+    {
+      "node_type": "Variable",
+      "var_kind": "temporary",
+      "name": "msg.sender",
+      "var_type": "address",
+      "is_storage": false,
+      "label": "temporary: msg.sender",
+      "id": "var_VulnerableBank_emergencyWithdraw_temporary_msg.sender_45"
+    },
+    {
+      "node_type": "Variable",
+      "var_kind": "temporary",
+      "name": "TMP_11",
+      "var_type": "uint256",
+      "is_storage": false,
+      "label": "temporary: TMP_11",
+      "id": "var_VulnerableBank_emergencyWithdraw_temporary_TMP_11_50"
+    },
+    {
+      "node_type": "FunctionCall",
+      "function": "unknown",
+      "call_type": "LowLevelCall",
+      "label": "Call: unknown",
+      "id": "op_VulnerableBank_emergencyWithdraw_4_51"
+    },
+    {
+      "node_type": "Constant",
+      "value": "",
+      "var_type": "string",
+      "label": "Const: ",
+      "id": "const_VulnerableBank_emergencyWithdraw_52"
+    },
+    {
+      "node_type": "Variable",
+      "var_kind": "temporary",
+      "name": "TUPLE_1",
+      "var_type": "[<slither.core.solidity_types.elementary_type.ElementaryType object at 0x000001C2355A4D70>, <slither.core.solidity_types.elementary_type.ElementaryType object at 0x000001C2355A4DE0>]",
+      "is_storage": false,
+      "label": "temporary: TUPLE_1",
+      "id": "var_VulnerableBank_emergencyWithdraw_temporary_TUPLE_1_53"
+    },
+    {
+      "node_type": "FunctionScope",
+      "function_name": "getBalance",
+      "label": "Function: getBalance",
+      "id": "func_scope_VulnerableBank_getBalance_1933630227152"
+    },
+    {
+      "node_type": "Variable",
+      "var_kind": "parameter",
+      "name": "user",
+      "var_type": "address",
+      "is_storage": false,
+      "label": "parameter: user",
+      "id": "var_VulnerableBank_getBalance_parameter_user_56"
+    },
+    {
+      "node_type": "Variable",
+      "var_kind": "temporary",
+      "name": "REF_5",
+      "var_type": "uint256",
+      "is_storage": false,
+      "label": "temporary: REF_5",
+      "id": "var_VulnerableBank_getBalance_temporary_REF_5_59"
+    },
+    {
+      "node_type": "Return",
+      "label": "Return",
+      "id": "op_VulnerableBank_getBalance_1_58"
+    },
+    {
+      "node_type": "FunctionScope",
+      "function_name": "canWithdraw",
+      "label": "Function: canWithdraw",
+      "id": "func_scope_VulnerableBank_canWithdraw_1933630227472"
+    },
+    {
+      "node_type": "Variable",
+      "var_kind": "parameter",
+      "name": "user",
+      "var_type": "address",
+      "is_storage": false,
+      "label": "parameter: user",
+      "id": "var_VulnerableBank_canWithdraw_parameter_user_60"
+    },
+    {
+      "node_type": "Variable",
+      "var_kind": "parameter",
+      "name": "amount",
+      "var_type": "uint256",
+      "is_storage": false,
+      "label": "parameter: amount",
+      "id": "var_VulnerableBank_canWithdraw_parameter_amount_61"
+    },
+    {
+      "node_type": "Variable",
+      "var_kind": "temporary",
+      "name": "TMP_13",
+      "var_type": "bool",
+      "is_storage": false,
+      "label": "temporary: TMP_13",
+      "id": "var_VulnerableBank_canWithdraw_temporary_TMP_13_64"
+    },
+    {
+      "node_type": "BinaryOperation",
+      "operation": "BinaryType.GREATER_EQUAL",
+      "label": "Op: BinaryType.GREATER_EQUAL",
+      "id": "op_VulnerableBank_canWithdraw_1_63"
+    },
+    {
+      "node_type": "Variable",
+      "var_kind": "temporary",
+      "name": "REF_6",
+      "var_type": "uint256",
+      "is_storage": false,
+      "label": "temporary: REF_6",
+      "id": "var_VulnerableBank_canWithdraw_temporary_REF_6_65"
+    },
+    {
+      "node_type": "Variable",
+      "var_kind": "temporary",
+      "name": "TMP_14",
+      "var_type": "bool",
+      "is_storage": false,
+      "label": "temporary: TMP_14",
+      "id": "var_VulnerableBank_canWithdraw_temporary_TMP_14_68"
+    },
+    {
+      "node_type": "BinaryOperation",
+      "operation": "BinaryType.GREATER",
+      "label": "Op: BinaryType.GREATER",
+      "id": "op_VulnerableBank_canWithdraw_2_67"
+    },
+    {
+      "node_type": "Constant",
+      "value": "0",
+      "var_type": "uint256",
+      "label": "Const: 0",
+      "id": "const_VulnerableBank_canWithdraw_69"
+    },
+    {
+      "node_type": "Constant",
+      "value": "True",
+      "var_type": "bool",
+      "label": "Const: True",
+      "id": "const_VulnerableBank_canWithdraw_72"
+    },
+    {
+      "node_type": "Return",
+      "label": "Return",
+      "id": "op_VulnerableBank_canWithdraw_3_71"
+    },
+    {
+      "node_type": "Constant",
+      "value": "False",
+      "var_type": "bool",
+      "label": "Const: False",
+      "id": "const_VulnerableBank_canWithdraw_74"
+    },
+    {
+      "node_type": "Return",
+      "label": "Return",
+      "id": "op_VulnerableBank_canWithdraw_6_73"
+    }
+  ],
+  "links": [
+    {
+      "edge_type": "declares",
+      "source": "contract_VulnerableBank",
+      "target": "var_VulnerableBank_state_balances_0"
+    },
+    {
+      "edge_type": "declares",
+      "source": "contract_VulnerableBank",
+      "target": "var_VulnerableBank_state_owner_1"
+    },
+    {
+      "edge_type": "declares",
+      "source": "contract_VulnerableBank",
+      "target": "var_VulnerableBank_state_totalDeposits_2"
+    },
+    {
+      "edge_type": "read_by",
+      "source": "var_VulnerableBank_state_balances_0",
+      "target": "func_scope_VulnerableBank_withdraw_1933629193296"
+    },
+    {
+      "edge_type": "read_by",
+      "source": "var_VulnerableBank_state_balances_0",
+      "target": "func_scope_VulnerableBank_deposit_1933629193616"
+    },
+    {
+      "edge_type": "read_by",
+      "source": "var_VulnerableBank_state_balances_0",
+      "target": "func_scope_VulnerableBank_getBalance_1933630227152"
+    },
+    {
+      "edge_type": "read_by",
+      "source": "var_VulnerableBank_state_balances_0",
+      "target": "func_scope_VulnerableBank_canWithdraw_1933630227472"
+    },
+    {
+      "edge_type": "operand",
+      "source": "var_VulnerableBank_state_owner_1",
+      "target": "op_VulnerableBank_emergencyWithdraw_1_43"
+    },
+    {
+      "edge_type": "read_by",
+      "source": "var_VulnerableBank_state_owner_1",
+      "target": "func_scope_VulnerableBank_emergencyWithdraw_1933630226832"
+    },
+    {
+      "edge_type": "operand",
+      "source": "var_VulnerableBank_state_totalDeposits_2",
+      "target": "op_VulnerableBank_withdraw_6_20"
+    },
+    {
+      "edge_type": "read_by",
+      "source": "var_VulnerableBank_state_totalDeposits_2",
+      "target": "func_scope_VulnerableBank_withdraw_1933629193296"
+    },
+    {
+      "edge_type": "operand",
+      "source": "var_VulnerableBank_state_totalDeposits_2",
+      "target": "op_VulnerableBank_deposit_3_30"
+    },
+    {
+      "edge_type": "read_by",
+      "source": "var_VulnerableBank_state_totalDeposits_2",
+      "target": "func_scope_VulnerableBank_deposit_1933629193616"
+    },
+    {
+      "edge_type": "writes_to",
+      "source": "func_scope_VulnerableBank_constructor_1933629192976",
+      "target": "var_VulnerableBank_state_owner_1"
+    },
+    {
+      "edge_type": "assignment",
+      "operation": "=",
+      "node_id": 1,
+      "source": "var_VulnerableBank_constructor_temporary_msg.sender_4",
+      "target": "var_VulnerableBank_state_owner_1"
+    },
+    {
+      "edge_type": "parameter",
+      "source": "func_scope_VulnerableBank_withdraw_1933629193296",
+      "target": "var_VulnerableBank_withdraw_parameter_amount_5"
+    },
+    {
+      "edge_type": "declares",
+      "source": "func_scope_VulnerableBank_withdraw_1933629193296",
+      "target": "var_VulnerableBank_withdraw_local_success_6"
+    },
+    {
+      "edge_type": "writes_to",
+      "source": "func_scope_VulnerableBank_withdraw_1933629193296",
+      "target": "var_VulnerableBank_state_balances_0"
+    },
+    {
+      "edge_type": "writes_to",
+      "source": "func_scope_VulnerableBank_withdraw_1933629193296",
+      "target": "var_VulnerableBank_state_totalDeposits_2"
+    },
+    {
+      "edge_type": "operand",
+      "source": "var_VulnerableBank_withdraw_parameter_amount_5",
+      "target": "op_VulnerableBank_withdraw_1_8"
+    },
+    {
+      "edge_type": "operand",
+      "source": "var_VulnerableBank_withdraw_parameter_amount_5",
+      "target": "op_VulnerableBank_withdraw_5_18"
+    },
+    {
+      "edge_type": "operand",
+      "source": "var_VulnerableBank_withdraw_parameter_amount_5",
+      "target": "op_VulnerableBank_withdraw_6_20"
+    },
+    {
+      "edge_type": "result",
+      "source": "op_VulnerableBank_withdraw_1_8",
+      "target": "var_VulnerableBank_withdraw_temporary_TMP_0_9"
+    },
+    {
+      "edge_type": "operand",
+      "source": "var_VulnerableBank_withdraw_temporary_REF_0_10",
+      "target": "op_VulnerableBank_withdraw_1_8"
+    },
+    {
+      "edge_type": "returns",
+      "source": "op_VulnerableBank_withdraw_3_12",
+      "target": "var_VulnerableBank_withdraw_temporary_TUPLE_0_14"
+    },
+    {
+      "edge_type": "argument",
+      "source": "const_VulnerableBank_withdraw_13",
+      "target": "op_VulnerableBank_withdraw_3_12"
+    },
+    {
+      "edge_type": "operand",
+      "source": "var_VulnerableBank_withdraw_temporary_REF_2_19",
+      "target": "op_VulnerableBank_withdraw_5_18"
+    },
+    {
+      "edge_type": "result",
+      "source": "op_VulnerableBank_withdraw_5_18",
+      "target": "var_VulnerableBank_withdraw_temporary_REF_2_19"
+    },
+    {
+      "edge_type": "result",
+      "source": "op_VulnerableBank_withdraw_6_20",
+      "target": "var_VulnerableBank_state_totalDeposits_2"
+    },
+    {
+      "edge_type": "writes_to",
+      "source": "func_scope_VulnerableBank_deposit_1933629193616",
+      "target": "var_VulnerableBank_state_balances_0"
+    },
+    {
+      "edge_type": "writes_to",
+      "source": "func_scope_VulnerableBank_deposit_1933629193616",
+      "target": "var_VulnerableBank_state_totalDeposits_2"
+    },
+    {
+      "edge_type": "result",
+      "source": "op_VulnerableBank_deposit_1_22",
+      "target": "var_VulnerableBank_deposit_temporary_TMP_4_23"
+    },
+    {
+      "edge_type": "operand",
+      "source": "var_VulnerableBank_deposit_temporary_msg.value_24",
+      "target": "op_VulnerableBank_deposit_1_22"
+    },
+    {
+      "edge_type": "operand",
+      "source": "var_VulnerableBank_deposit_temporary_msg.value_24",
+      "target": "op_VulnerableBank_deposit_2_28"
+    },
+    {
+      "edge_type": "operand",
+      "source": "var_VulnerableBank_deposit_temporary_msg.value_24",
+      "target": "op_VulnerableBank_deposit_3_30"
+    },
+    {
+      "edge_type": "operand",
+      "source": "const_VulnerableBank_deposit_25",
+      "target": "op_VulnerableBank_deposit_1_22"
+    },
+    {
+      "edge_type": "operand",
+      "source": "var_VulnerableBank_deposit_temporary_REF_3_29",
+      "target": "op_VulnerableBank_deposit_2_28"
+    },
+    {
+      "edge_type": "result",
+      "source": "op_VulnerableBank_deposit_2_28",
+      "target": "var_VulnerableBank_deposit_temporary_REF_3_29"
+    },
+    {
+      "edge_type": "result",
+      "source": "op_VulnerableBank_deposit_3_30",
+      "target": "var_VulnerableBank_state_totalDeposits_2"
+    },
+    {
+      "edge_type": "parameter",
+      "source": "func_scope_VulnerableBank_calculateBonus_1933629193936",
+      "target": "var_VulnerableBank_calculateBonus_parameter_balance_32"
+    },
+    {
+      "edge_type": "parameter",
+      "source": "func_scope_VulnerableBank_calculateBonus_1933629193936",
+      "target": "var_VulnerableBank_calculateBonus_parameter_multiplier_33"
+    },
+    {
+      "edge_type": "declares",
+      "source": "func_scope_VulnerableBank_calculateBonus_1933629193936",
+      "target": "var_VulnerableBank_calculateBonus_local_bonus_34"
+    },
+    {
+      "edge_type": "operand",
+      "source": "var_VulnerableBank_calculateBonus_parameter_balance_32",
+      "target": "op_VulnerableBank_calculateBonus_1_35"
+    },
+    {
+      "edge_type": "operand",
+      "source": "var_VulnerableBank_calculateBonus_parameter_multiplier_33",
+      "target": "op_VulnerableBank_calculateBonus_1_35"
+    },
+    {
+      "edge_type": "return_value",
+      "source": "var_VulnerableBank_calculateBonus_local_bonus_34",
+      "target": "op_VulnerableBank_calculateBonus_2_38"
+    },
+    {
+      "edge_type": "assignment",
+      "operation": "=",
+      "node_id": 1,
+      "source": "var_VulnerableBank_calculateBonus_temporary_TMP_7_36",
+      "target": "var_VulnerableBank_calculateBonus_local_bonus_34"
+    },
+    {
+      "edge_type": "result",
+      "source": "op_VulnerableBank_calculateBonus_1_35",
+      "target": "var_VulnerableBank_calculateBonus_temporary_TMP_7_36"
+    },
+    {
+      "edge_type": "parameter",
+      "source": "func_scope_VulnerableBank_updateTotalDeposits_1933630226512",
+      "target": "var_VulnerableBank_updateTotalDeposits_parameter_newTotal_39"
+    },
+    {
+      "edge_type": "writes_to",
+      "source": "func_scope_VulnerableBank_updateTotalDeposits_1933630226512",
+      "target": "var_VulnerableBank_state_totalDeposits_2"
+    },
+    {
+      "edge_type": "assignment",
+      "operation": "=",
+      "node_id": 1,
+      "source": "var_VulnerableBank_updateTotalDeposits_parameter_newTotal_39",
+      "target": "var_VulnerableBank_state_totalDeposits_2"
+    },
+    {
+      "edge_type": "declares",
+      "source": "func_scope_VulnerableBank_emergencyWithdraw_1933630226832",
+      "target": "var_VulnerableBank_emergencyWithdraw_local_balance_41"
+    },
+    {
+      "edge_type": "declares",
+      "source": "func_scope_VulnerableBank_emergencyWithdraw_1933630226832",
+      "target": "var_VulnerableBank_emergencyWithdraw_local_success_42"
+    },
+    {
+      "edge_type": "result",
+      "source": "op_VulnerableBank_emergencyWithdraw_1_43",
+      "target": "var_VulnerableBank_emergencyWithdraw_temporary_TMP_8_44"
+    },
+    {
+      "edge_type": "operand",
+      "source": "var_VulnerableBank_emergencyWithdraw_temporary_msg.sender_45",
+      "target": "op_VulnerableBank_emergencyWithdraw_1_43"
+    },
+    {
+      "edge_type": "assignment",
+      "operation": "=",
+      "node_id": 2,
+      "source": "var_VulnerableBank_emergencyWithdraw_temporary_TMP_11_50",
+      "target": "var_VulnerableBank_emergencyWithdraw_local_balance_41"
+    },
+    {
+      "edge_type": "returns",
+      "source": "op_VulnerableBank_emergencyWithdraw_4_51",
+      "target": "var_VulnerableBank_emergencyWithdraw_temporary_TUPLE_1_53"
+    },
+    {
+      "edge_type": "argument",
+      "source": "const_VulnerableBank_emergencyWithdraw_52",
+      "target": "op_VulnerableBank_emergencyWithdraw_4_51"
+    },
+    {
+      "edge_type": "parameter",
+      "source": "func_scope_VulnerableBank_getBalance_1933630227152",
+      "target": "var_VulnerableBank_getBalance_parameter_user_56"
+    },
+    {
+      "edge_type": "return_value",
+      "source": "var_VulnerableBank_getBalance_temporary_REF_5_59",
+      "target": "op_VulnerableBank_getBalance_1_58"
+    },
+    {
+      "edge_type": "parameter",
+      "source": "func_scope_VulnerableBank_canWithdraw_1933630227472",
+      "target": "var_VulnerableBank_canWithdraw_parameter_user_60"
+    },
+    {
+      "edge_type": "parameter",
+      "source": "func_scope_VulnerableBank_canWithdraw_1933630227472",
+      "target": "var_VulnerableBank_canWithdraw_parameter_amount_61"
+    },
+    {
+      "edge_type": "operand",
+      "source": "var_VulnerableBank_canWithdraw_parameter_amount_61",
+      "target": "op_VulnerableBank_canWithdraw_1_63"
+    },
+    {
+      "edge_type": "operand",
+      "source": "var_VulnerableBank_canWithdraw_parameter_amount_61",
+      "target": "op_VulnerableBank_canWithdraw_2_67"
+    },
+    {
+      "edge_type": "result",
+      "source": "op_VulnerableBank_canWithdraw_1_63",
+      "target": "var_VulnerableBank_canWithdraw_temporary_TMP_13_64"
+    },
+    {
+      "edge_type": "operand",
+      "source": "var_VulnerableBank_canWithdraw_temporary_REF_6_65",
+      "target": "op_VulnerableBank_canWithdraw_1_63"
+    },
+    {
+      "edge_type": "result",
+      "source": "op_VulnerableBank_canWithdraw_2_67",
+      "target": "var_VulnerableBank_canWithdraw_temporary_TMP_14_68"
+    },
+    {
+      "edge_type": "operand",
+      "source": "const_VulnerableBank_canWithdraw_69",
+      "target": "op_VulnerableBank_canWithdraw_2_67"
+    },
+    {
+      "edge_type": "return_value",
+      "source": "const_VulnerableBank_canWithdraw_72",
+      "target": "op_VulnerableBank_canWithdraw_3_71"
+    },
+    {
+      "edge_type": "return_value",
+      "source": "const_VulnerableBank_canWithdraw_74",
+      "target": "op_VulnerableBank_canWithdraw_6_73"
+    }
+  ]
+}

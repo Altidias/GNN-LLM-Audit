@@ -1,0 +1,813 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "node_type": "ContractEntry",
+      "name": "VulnerableBank",
+      "label": "Contract: VulnerableBank",
+      "id": "contract_VulnerableBank"
+    },
+    {
+      "node_type": "FunctionEntry",
+      "function_name": "constructor",
+      "visibility": "public",
+      "is_constructor": true,
+      "payable": false,
+      "view": false,
+      "pure": false,
+      "label": "Function: constructor",
+      "id": "func_entry_VulnerableBank_constructor_1933628270032"
+    },
+    {
+      "node_type": "EntryPoint",
+      "cfg_node_type": "NodeType.ENTRYPOINT",
+      "label": "EntryPoint",
+      "expression": "",
+      "source_mapping": "VulnerableBank.sol#16-18",
+      "can_reenter": false,
+      "can_send_eth": false,
+      "is_guard": false,
+      "guard_type": null,
+      "contains_external_call": false,
+      "contains_state_write": false,
+      "id": "cfg_node_VulnerableBank_constructor_0"
+    },
+    {
+      "node_type": "Expression",
+      "cfg_node_type": "NodeType.EXPRESSION",
+      "label": "Expression: owner = msg.sender",
+      "expression": "owner = msg.sender",
+      "source_mapping": "VulnerableBank.sol#17",
+      "can_reenter": false,
+      "can_send_eth": false,
+      "is_guard": false,
+      "guard_type": null,
+      "contains_external_call": false,
+      "contains_state_write": true,
+      "id": "cfg_node_VulnerableBank_constructor_1"
+    },
+    {
+      "node_type": "FunctionEntry",
+      "function_name": "withdraw",
+      "visibility": "public",
+      "is_constructor": false,
+      "payable": false,
+      "view": false,
+      "pure": false,
+      "label": "Function: withdraw",
+      "id": "func_entry_VulnerableBank_withdraw_1933628270352"
+    },
+    {
+      "node_type": "EntryPoint",
+      "cfg_node_type": "NodeType.ENTRYPOINT",
+      "label": "EntryPoint",
+      "expression": "",
+      "source_mapping": "VulnerableBank.sol#22-34",
+      "can_reenter": false,
+      "can_send_eth": false,
+      "is_guard": false,
+      "guard_type": null,
+      "contains_external_call": false,
+      "contains_state_write": false,
+      "id": "cfg_node_VulnerableBank_withdraw_0"
+    },
+    {
+      "node_type": "Expression",
+      "cfg_node_type": "NodeType.EXPRESSION",
+      "label": "Expression: require(bool,string)(balances[msg.sender] >= am...",
+      "expression": "require(bool,string)(balances[msg.sender] >= amount,Insufficient balance)",
+      "source_mapping": "VulnerableBank.sol#23",
+      "can_reenter": false,
+      "can_send_eth": false,
+      "is_guard": true,
+      "guard_type": "require",
+      "contains_external_call": false,
+      "contains_state_write": false,
+      "id": "cfg_node_VulnerableBank_withdraw_1"
+    },
+    {
+      "node_type": "Variable",
+      "cfg_node_type": "NodeType.VARIABLE",
+      "label": "Variable",
+      "expression": "",
+      "source_mapping": "VulnerableBank.sol#26",
+      "can_reenter": false,
+      "can_send_eth": false,
+      "is_guard": false,
+      "guard_type": null,
+      "contains_external_call": false,
+      "contains_state_write": false,
+      "id": "cfg_node_VulnerableBank_withdraw_2"
+    },
+    {
+      "node_type": "Expression",
+      "cfg_node_type": "NodeType.EXPRESSION",
+      "label": "Expression: (success,None) = msg.sender.call{value: amount}()",
+      "expression": "(success,None) = msg.sender.call{value: amount}()",
+      "source_mapping": "VulnerableBank.sol#26",
+      "can_reenter": true,
+      "can_send_eth": true,
+      "is_guard": false,
+      "guard_type": null,
+      "contains_external_call": true,
+      "contains_state_write": false,
+      "id": "cfg_node_VulnerableBank_withdraw_3"
+    },
+    {
+      "node_type": "Expression",
+      "cfg_node_type": "NodeType.EXPRESSION",
+      "label": "Expression: require(bool,string)(success,Transfer failed)",
+      "expression": "require(bool,string)(success,Transfer failed)",
+      "source_mapping": "VulnerableBank.sol#27",
+      "can_reenter": false,
+      "can_send_eth": false,
+      "is_guard": true,
+      "guard_type": "require",
+      "contains_external_call": false,
+      "contains_state_write": false,
+      "id": "cfg_node_VulnerableBank_withdraw_4"
+    },
+    {
+      "node_type": "Expression",
+      "cfg_node_type": "NodeType.EXPRESSION",
+      "label": "Expression: balances[msg.sender] -= amount",
+      "expression": "balances[msg.sender] -= amount",
+      "source_mapping": "VulnerableBank.sol#30",
+      "can_reenter": false,
+      "can_send_eth": false,
+      "is_guard": false,
+      "guard_type": null,
+      "contains_external_call": false,
+      "contains_state_write": true,
+      "id": "cfg_node_VulnerableBank_withdraw_5"
+    },
+    {
+      "node_type": "Expression",
+      "cfg_node_type": "NodeType.EXPRESSION",
+      "label": "Expression: totalDeposits -= amount",
+      "expression": "totalDeposits -= amount",
+      "source_mapping": "VulnerableBank.sol#31",
+      "can_reenter": false,
+      "can_send_eth": false,
+      "is_guard": false,
+      "guard_type": null,
+      "contains_external_call": false,
+      "contains_state_write": true,
+      "id": "cfg_node_VulnerableBank_withdraw_6"
+    },
+    {
+      "node_type": "Expression",
+      "cfg_node_type": "NodeType.EXPRESSION",
+      "label": "Expression: Withdrawal(msg.sender,amount)",
+      "expression": "Withdrawal(msg.sender,amount)",
+      "source_mapping": "VulnerableBank.sol#33",
+      "can_reenter": false,
+      "can_send_eth": false,
+      "is_guard": false,
+      "guard_type": null,
+      "contains_external_call": false,
+      "contains_state_write": false,
+      "id": "cfg_node_VulnerableBank_withdraw_7"
+    },
+    {
+      "node_type": "FunctionEntry",
+      "function_name": "deposit",
+      "visibility": "public",
+      "is_constructor": false,
+      "payable": true,
+      "view": false,
+      "pure": false,
+      "label": "Function: deposit",
+      "id": "func_entry_VulnerableBank_deposit_1933628270672"
+    },
+    {
+      "node_type": "EntryPoint",
+      "cfg_node_type": "NodeType.ENTRYPOINT",
+      "label": "EntryPoint",
+      "expression": "",
+      "source_mapping": "VulnerableBank.sol#37-44",
+      "can_reenter": false,
+      "can_send_eth": false,
+      "is_guard": false,
+      "guard_type": null,
+      "contains_external_call": false,
+      "contains_state_write": false,
+      "id": "cfg_node_VulnerableBank_deposit_0"
+    },
+    {
+      "node_type": "Expression",
+      "cfg_node_type": "NodeType.EXPRESSION",
+      "label": "Expression: require(bool,string)(msg.value > 0,Must deposit...",
+      "expression": "require(bool,string)(msg.value > 0,Must deposit something)",
+      "source_mapping": "VulnerableBank.sol#38",
+      "can_reenter": false,
+      "can_send_eth": false,
+      "is_guard": true,
+      "guard_type": "require",
+      "contains_external_call": false,
+      "contains_state_write": false,
+      "id": "cfg_node_VulnerableBank_deposit_1"
+    },
+    {
+      "node_type": "Expression",
+      "cfg_node_type": "NodeType.EXPRESSION",
+      "label": "Expression: balances[msg.sender] += msg.value",
+      "expression": "balances[msg.sender] += msg.value",
+      "source_mapping": "VulnerableBank.sol#40",
+      "can_reenter": false,
+      "can_send_eth": false,
+      "is_guard": false,
+      "guard_type": null,
+      "contains_external_call": false,
+      "contains_state_write": true,
+      "id": "cfg_node_VulnerableBank_deposit_2"
+    },
+    {
+      "node_type": "Expression",
+      "cfg_node_type": "NodeType.EXPRESSION",
+      "label": "Expression: totalDeposits += msg.value",
+      "expression": "totalDeposits += msg.value",
+      "source_mapping": "VulnerableBank.sol#41",
+      "can_reenter": false,
+      "can_send_eth": false,
+      "is_guard": false,
+      "guard_type": null,
+      "contains_external_call": false,
+      "contains_state_write": true,
+      "id": "cfg_node_VulnerableBank_deposit_3"
+    },
+    {
+      "node_type": "Expression",
+      "cfg_node_type": "NodeType.EXPRESSION",
+      "label": "Expression: Deposit(msg.sender,msg.value)",
+      "expression": "Deposit(msg.sender,msg.value)",
+      "source_mapping": "VulnerableBank.sol#43",
+      "can_reenter": false,
+      "can_send_eth": false,
+      "is_guard": false,
+      "guard_type": null,
+      "contains_external_call": false,
+      "contains_state_write": false,
+      "id": "cfg_node_VulnerableBank_deposit_4"
+    },
+    {
+      "node_type": "FunctionEntry",
+      "function_name": "calculateBonus",
+      "visibility": "public",
+      "is_constructor": false,
+      "payable": false,
+      "view": true,
+      "pure": true,
+      "label": "Function: calculateBonus",
+      "id": "func_entry_VulnerableBank_calculateBonus_1933628270992"
+    },
+    {
+      "node_type": "EntryPoint",
+      "cfg_node_type": "NodeType.ENTRYPOINT",
+      "label": "EntryPoint",
+      "expression": "",
+      "source_mapping": "VulnerableBank.sol#48-52",
+      "can_reenter": false,
+      "can_send_eth": false,
+      "is_guard": false,
+      "guard_type": null,
+      "contains_external_call": false,
+      "contains_state_write": false,
+      "id": "cfg_node_VulnerableBank_calculateBonus_0"
+    },
+    {
+      "node_type": "Variable",
+      "cfg_node_type": "NodeType.VARIABLE",
+      "label": "Variable: bonus = balance * multiplier",
+      "expression": "bonus = balance * multiplier",
+      "source_mapping": "VulnerableBank.sol#50",
+      "can_reenter": false,
+      "can_send_eth": false,
+      "is_guard": false,
+      "guard_type": null,
+      "contains_external_call": false,
+      "contains_state_write": false,
+      "id": "cfg_node_VulnerableBank_calculateBonus_1"
+    },
+    {
+      "node_type": "Return",
+      "cfg_node_type": "NodeType.RETURN",
+      "label": "Return: bonus",
+      "expression": "bonus",
+      "source_mapping": "VulnerableBank.sol#51",
+      "can_reenter": false,
+      "can_send_eth": false,
+      "is_guard": false,
+      "guard_type": null,
+      "contains_external_call": false,
+      "contains_state_write": false,
+      "id": "cfg_node_VulnerableBank_calculateBonus_2"
+    },
+    {
+      "node_type": "FunctionEntry",
+      "function_name": "updateTotalDeposits",
+      "visibility": "public",
+      "is_constructor": false,
+      "payable": false,
+      "view": false,
+      "pure": false,
+      "label": "Function: updateTotalDeposits",
+      "id": "func_entry_VulnerableBank_updateTotalDeposits_1933628271312"
+    },
+    {
+      "node_type": "EntryPoint",
+      "cfg_node_type": "NodeType.ENTRYPOINT",
+      "label": "EntryPoint",
+      "expression": "",
+      "source_mapping": "VulnerableBank.sol#56-59",
+      "can_reenter": false,
+      "can_send_eth": false,
+      "is_guard": false,
+      "guard_type": null,
+      "contains_external_call": false,
+      "contains_state_write": false,
+      "id": "cfg_node_VulnerableBank_updateTotalDeposits_0"
+    },
+    {
+      "node_type": "Expression",
+      "cfg_node_type": "NodeType.EXPRESSION",
+      "label": "Expression: totalDeposits = newTotal",
+      "expression": "totalDeposits = newTotal",
+      "source_mapping": "VulnerableBank.sol#58",
+      "can_reenter": false,
+      "can_send_eth": false,
+      "is_guard": false,
+      "guard_type": null,
+      "contains_external_call": false,
+      "contains_state_write": true,
+      "id": "cfg_node_VulnerableBank_updateTotalDeposits_1"
+    },
+    {
+      "node_type": "FunctionEntry",
+      "function_name": "emergencyWithdraw",
+      "visibility": "public",
+      "is_constructor": false,
+      "payable": false,
+      "view": false,
+      "pure": false,
+      "label": "Function: emergencyWithdraw",
+      "id": "func_entry_VulnerableBank_emergencyWithdraw_1933628271632"
+    },
+    {
+      "node_type": "EntryPoint",
+      "cfg_node_type": "NodeType.ENTRYPOINT",
+      "label": "EntryPoint",
+      "expression": "",
+      "source_mapping": "VulnerableBank.sol#62-68",
+      "can_reenter": false,
+      "can_send_eth": false,
+      "is_guard": false,
+      "guard_type": null,
+      "contains_external_call": false,
+      "contains_state_write": false,
+      "id": "cfg_node_VulnerableBank_emergencyWithdraw_0"
+    },
+    {
+      "node_type": "Expression",
+      "cfg_node_type": "NodeType.EXPRESSION",
+      "label": "Expression: require(bool,string)(msg.sender == owner,Only o...",
+      "expression": "require(bool,string)(msg.sender == owner,Only owner)",
+      "source_mapping": "VulnerableBank.sol#63",
+      "can_reenter": false,
+      "can_send_eth": false,
+      "is_guard": true,
+      "guard_type": "require",
+      "contains_external_call": false,
+      "contains_state_write": false,
+      "id": "cfg_node_VulnerableBank_emergencyWithdraw_1"
+    },
+    {
+      "node_type": "Variable",
+      "cfg_node_type": "NodeType.VARIABLE",
+      "label": "Variable: balance = address(this).balance",
+      "expression": "balance = address(this).balance",
+      "source_mapping": "VulnerableBank.sol#65",
+      "can_reenter": false,
+      "can_send_eth": false,
+      "is_guard": false,
+      "guard_type": null,
+      "contains_external_call": false,
+      "contains_state_write": false,
+      "id": "cfg_node_VulnerableBank_emergencyWithdraw_2"
+    },
+    {
+      "node_type": "Variable",
+      "cfg_node_type": "NodeType.VARIABLE",
+      "label": "Variable",
+      "expression": "",
+      "source_mapping": "VulnerableBank.sol#66",
+      "can_reenter": false,
+      "can_send_eth": false,
+      "is_guard": false,
+      "guard_type": null,
+      "contains_external_call": false,
+      "contains_state_write": false,
+      "id": "cfg_node_VulnerableBank_emergencyWithdraw_3"
+    },
+    {
+      "node_type": "Expression",
+      "cfg_node_type": "NodeType.EXPRESSION",
+      "label": "Expression: (success,None) = owner.call{value: balance}()",
+      "expression": "(success,None) = owner.call{value: balance}()",
+      "source_mapping": "VulnerableBank.sol#66",
+      "can_reenter": true,
+      "can_send_eth": true,
+      "is_guard": false,
+      "guard_type": null,
+      "contains_external_call": true,
+      "contains_state_write": false,
+      "id": "cfg_node_VulnerableBank_emergencyWithdraw_4"
+    },
+    {
+      "node_type": "Expression",
+      "cfg_node_type": "NodeType.EXPRESSION",
+      "label": "Expression: require(bool,string)(success,Transfer failed)",
+      "expression": "require(bool,string)(success,Transfer failed)",
+      "source_mapping": "VulnerableBank.sol#67",
+      "can_reenter": false,
+      "can_send_eth": false,
+      "is_guard": true,
+      "guard_type": "require",
+      "contains_external_call": false,
+      "contains_state_write": false,
+      "id": "cfg_node_VulnerableBank_emergencyWithdraw_5"
+    },
+    {
+      "node_type": "FunctionEntry",
+      "function_name": "getBalance",
+      "visibility": "public",
+      "is_constructor": false,
+      "payable": false,
+      "view": true,
+      "pure": false,
+      "label": "Function: getBalance",
+      "id": "func_entry_VulnerableBank_getBalance_1933628271952"
+    },
+    {
+      "node_type": "EntryPoint",
+      "cfg_node_type": "NodeType.ENTRYPOINT",
+      "label": "EntryPoint",
+      "expression": "",
+      "source_mapping": "VulnerableBank.sol#71-73",
+      "can_reenter": false,
+      "can_send_eth": false,
+      "is_guard": false,
+      "guard_type": null,
+      "contains_external_call": false,
+      "contains_state_write": false,
+      "id": "cfg_node_VulnerableBank_getBalance_0"
+    },
+    {
+      "node_type": "Return",
+      "cfg_node_type": "NodeType.RETURN",
+      "label": "Return: balances[user]",
+      "expression": "balances[user]",
+      "source_mapping": "VulnerableBank.sol#72",
+      "can_reenter": false,
+      "can_send_eth": false,
+      "is_guard": false,
+      "guard_type": null,
+      "contains_external_call": false,
+      "contains_state_write": false,
+      "id": "cfg_node_VulnerableBank_getBalance_1"
+    },
+    {
+      "node_type": "FunctionEntry",
+      "function_name": "canWithdraw",
+      "visibility": "public",
+      "is_constructor": false,
+      "payable": false,
+      "view": true,
+      "pure": false,
+      "label": "Function: canWithdraw",
+      "id": "func_entry_VulnerableBank_canWithdraw_1933628272272"
+    },
+    {
+      "node_type": "EntryPoint",
+      "cfg_node_type": "NodeType.ENTRYPOINT",
+      "label": "EntryPoint",
+      "expression": "",
+      "source_mapping": "VulnerableBank.sol#76-83",
+      "can_reenter": false,
+      "can_send_eth": false,
+      "is_guard": false,
+      "guard_type": null,
+      "contains_external_call": false,
+      "contains_state_write": false,
+      "id": "cfg_node_VulnerableBank_canWithdraw_0"
+    },
+    {
+      "node_type": "Conditional",
+      "cfg_node_type": "NodeType.IF",
+      "label": "Conditional: balances[user] >= amount",
+      "expression": "balances[user] >= amount",
+      "source_mapping": "VulnerableBank.sol#77",
+      "can_reenter": false,
+      "can_send_eth": false,
+      "is_guard": false,
+      "guard_type": null,
+      "contains_external_call": false,
+      "contains_state_write": false,
+      "id": "cfg_node_VulnerableBank_canWithdraw_1"
+    },
+    {
+      "node_type": "Conditional",
+      "cfg_node_type": "NodeType.IF",
+      "label": "Conditional: amount > 0",
+      "expression": "amount > 0",
+      "source_mapping": "VulnerableBank.sol#78",
+      "can_reenter": false,
+      "can_send_eth": false,
+      "is_guard": false,
+      "guard_type": null,
+      "contains_external_call": false,
+      "contains_state_write": false,
+      "id": "cfg_node_VulnerableBank_canWithdraw_2"
+    },
+    {
+      "node_type": "Return",
+      "cfg_node_type": "NodeType.RETURN",
+      "label": "Return: true",
+      "expression": "true",
+      "source_mapping": "VulnerableBank.sol#79",
+      "can_reenter": false,
+      "can_send_eth": false,
+      "is_guard": false,
+      "guard_type": null,
+      "contains_external_call": false,
+      "contains_state_write": false,
+      "id": "cfg_node_VulnerableBank_canWithdraw_3"
+    },
+    {
+      "node_type": "EndIf",
+      "cfg_node_type": "NodeType.ENDIF",
+      "label": "EndIf",
+      "expression": "",
+      "source_mapping": "VulnerableBank.sol#78-80",
+      "can_reenter": false,
+      "can_send_eth": false,
+      "is_guard": false,
+      "guard_type": null,
+      "contains_external_call": false,
+      "contains_state_write": false,
+      "id": "cfg_node_VulnerableBank_canWithdraw_4"
+    },
+    {
+      "node_type": "EndIf",
+      "cfg_node_type": "NodeType.ENDIF",
+      "label": "EndIf",
+      "expression": "",
+      "source_mapping": "VulnerableBank.sol#77-81",
+      "can_reenter": false,
+      "can_send_eth": false,
+      "is_guard": false,
+      "guard_type": null,
+      "contains_external_call": false,
+      "contains_state_write": false,
+      "id": "cfg_node_VulnerableBank_canWithdraw_5"
+    },
+    {
+      "node_type": "Return",
+      "cfg_node_type": "NodeType.RETURN",
+      "label": "Return: false",
+      "expression": "false",
+      "source_mapping": "VulnerableBank.sol#82",
+      "can_reenter": false,
+      "can_send_eth": false,
+      "is_guard": false,
+      "guard_type": null,
+      "contains_external_call": false,
+      "contains_state_write": false,
+      "id": "cfg_node_VulnerableBank_canWithdraw_6"
+    }
+  ],
+  "links": [
+    {
+      "edge_type": "contains",
+      "source": "contract_VulnerableBank",
+      "target": "func_entry_VulnerableBank_constructor_1933628270032"
+    },
+    {
+      "edge_type": "contains",
+      "source": "contract_VulnerableBank",
+      "target": "func_entry_VulnerableBank_withdraw_1933628270352"
+    },
+    {
+      "edge_type": "contains",
+      "source": "contract_VulnerableBank",
+      "target": "func_entry_VulnerableBank_deposit_1933628270672"
+    },
+    {
+      "edge_type": "contains",
+      "source": "contract_VulnerableBank",
+      "target": "func_entry_VulnerableBank_calculateBonus_1933628270992"
+    },
+    {
+      "edge_type": "contains",
+      "source": "contract_VulnerableBank",
+      "target": "func_entry_VulnerableBank_updateTotalDeposits_1933628271312"
+    },
+    {
+      "edge_type": "contains",
+      "source": "contract_VulnerableBank",
+      "target": "func_entry_VulnerableBank_emergencyWithdraw_1933628271632"
+    },
+    {
+      "edge_type": "contains",
+      "source": "contract_VulnerableBank",
+      "target": "func_entry_VulnerableBank_getBalance_1933628271952"
+    },
+    {
+      "edge_type": "contains",
+      "source": "contract_VulnerableBank",
+      "target": "func_entry_VulnerableBank_canWithdraw_1933628272272"
+    },
+    {
+      "edge_type": "entry",
+      "source": "func_entry_VulnerableBank_constructor_1933628270032",
+      "target": "cfg_node_VulnerableBank_constructor_0"
+    },
+    {
+      "edge_type": "sequential",
+      "source": "cfg_node_VulnerableBank_constructor_0",
+      "target": "cfg_node_VulnerableBank_constructor_1"
+    },
+    {
+      "edge_type": "entry",
+      "source": "func_entry_VulnerableBank_withdraw_1933628270352",
+      "target": "cfg_node_VulnerableBank_withdraw_0"
+    },
+    {
+      "edge_type": "sequential",
+      "source": "cfg_node_VulnerableBank_withdraw_0",
+      "target": "cfg_node_VulnerableBank_withdraw_1"
+    },
+    {
+      "edge_type": "sequential",
+      "source": "cfg_node_VulnerableBank_withdraw_1",
+      "target": "cfg_node_VulnerableBank_withdraw_2"
+    },
+    {
+      "edge_type": "to_external_call",
+      "source": "cfg_node_VulnerableBank_withdraw_2",
+      "target": "cfg_node_VulnerableBank_withdraw_3"
+    },
+    {
+      "edge_type": "post_external_call",
+      "source": "cfg_node_VulnerableBank_withdraw_3",
+      "target": "cfg_node_VulnerableBank_withdraw_4"
+    },
+    {
+      "edge_type": "sequential",
+      "source": "cfg_node_VulnerableBank_withdraw_4",
+      "target": "cfg_node_VulnerableBank_withdraw_5"
+    },
+    {
+      "edge_type": "sequential",
+      "source": "cfg_node_VulnerableBank_withdraw_5",
+      "target": "cfg_node_VulnerableBank_withdraw_6"
+    },
+    {
+      "edge_type": "sequential",
+      "source": "cfg_node_VulnerableBank_withdraw_6",
+      "target": "cfg_node_VulnerableBank_withdraw_7"
+    },
+    {
+      "edge_type": "entry",
+      "source": "func_entry_VulnerableBank_deposit_1933628270672",
+      "target": "cfg_node_VulnerableBank_deposit_0"
+    },
+    {
+      "edge_type": "sequential",
+      "source": "cfg_node_VulnerableBank_deposit_0",
+      "target": "cfg_node_VulnerableBank_deposit_1"
+    },
+    {
+      "edge_type": "sequential",
+      "source": "cfg_node_VulnerableBank_deposit_1",
+      "target": "cfg_node_VulnerableBank_deposit_2"
+    },
+    {
+      "edge_type": "sequential",
+      "source": "cfg_node_VulnerableBank_deposit_2",
+      "target": "cfg_node_VulnerableBank_deposit_3"
+    },
+    {
+      "edge_type": "sequential",
+      "source": "cfg_node_VulnerableBank_deposit_3",
+      "target": "cfg_node_VulnerableBank_deposit_4"
+    },
+    {
+      "edge_type": "entry",
+      "source": "func_entry_VulnerableBank_calculateBonus_1933628270992",
+      "target": "cfg_node_VulnerableBank_calculateBonus_0"
+    },
+    {
+      "edge_type": "sequential",
+      "source": "cfg_node_VulnerableBank_calculateBonus_0",
+      "target": "cfg_node_VulnerableBank_calculateBonus_1"
+    },
+    {
+      "edge_type": "sequential",
+      "source": "cfg_node_VulnerableBank_calculateBonus_1",
+      "target": "cfg_node_VulnerableBank_calculateBonus_2"
+    },
+    {
+      "edge_type": "entry",
+      "source": "func_entry_VulnerableBank_updateTotalDeposits_1933628271312",
+      "target": "cfg_node_VulnerableBank_updateTotalDeposits_0"
+    },
+    {
+      "edge_type": "sequential",
+      "source": "cfg_node_VulnerableBank_updateTotalDeposits_0",
+      "target": "cfg_node_VulnerableBank_updateTotalDeposits_1"
+    },
+    {
+      "edge_type": "entry",
+      "source": "func_entry_VulnerableBank_emergencyWithdraw_1933628271632",
+      "target": "cfg_node_VulnerableBank_emergencyWithdraw_0"
+    },
+    {
+      "edge_type": "sequential",
+      "source": "cfg_node_VulnerableBank_emergencyWithdraw_0",
+      "target": "cfg_node_VulnerableBank_emergencyWithdraw_1"
+    },
+    {
+      "edge_type": "sequential",
+      "source": "cfg_node_VulnerableBank_emergencyWithdraw_1",
+      "target": "cfg_node_VulnerableBank_emergencyWithdraw_2"
+    },
+    {
+      "edge_type": "sequential",
+      "source": "cfg_node_VulnerableBank_emergencyWithdraw_2",
+      "target": "cfg_node_VulnerableBank_emergencyWithdraw_3"
+    },
+    {
+      "edge_type": "to_external_call",
+      "source": "cfg_node_VulnerableBank_emergencyWithdraw_3",
+      "target": "cfg_node_VulnerableBank_emergencyWithdraw_4"
+    },
+    {
+      "edge_type": "post_external_call",
+      "source": "cfg_node_VulnerableBank_emergencyWithdraw_4",
+      "target": "cfg_node_VulnerableBank_emergencyWithdraw_5"
+    },
+    {
+      "edge_type": "entry",
+      "source": "func_entry_VulnerableBank_getBalance_1933628271952",
+      "target": "cfg_node_VulnerableBank_getBalance_0"
+    },
+    {
+      "edge_type": "sequential",
+      "source": "cfg_node_VulnerableBank_getBalance_0",
+      "target": "cfg_node_VulnerableBank_getBalance_1"
+    },
+    {
+      "edge_type": "entry",
+      "source": "func_entry_VulnerableBank_canWithdraw_1933628272272",
+      "target": "cfg_node_VulnerableBank_canWithdraw_0"
+    },
+    {
+      "edge_type": "sequential",
+      "source": "cfg_node_VulnerableBank_canWithdraw_0",
+      "target": "cfg_node_VulnerableBank_canWithdraw_1"
+    },
+    {
+      "edge_type": "conditional_true",
+      "source": "cfg_node_VulnerableBank_canWithdraw_1",
+      "target": "cfg_node_VulnerableBank_canWithdraw_2"
+    },
+    {
+      "edge_type": "conditional_false",
+      "source": "cfg_node_VulnerableBank_canWithdraw_1",
+      "target": "cfg_node_VulnerableBank_canWithdraw_5"
+    },
+    {
+      "edge_type": "conditional_true",
+      "source": "cfg_node_VulnerableBank_canWithdraw_2",
+      "target": "cfg_node_VulnerableBank_canWithdraw_3"
+    },
+    {
+      "edge_type": "conditional_false",
+      "source": "cfg_node_VulnerableBank_canWithdraw_2",
+      "target": "cfg_node_VulnerableBank_canWithdraw_4"
+    },
+    {
+      "edge_type": "sequential",
+      "source": "cfg_node_VulnerableBank_canWithdraw_4",
+      "target": "cfg_node_VulnerableBank_canWithdraw_5"
+    },
+    {
+      "edge_type": "sequential",
+      "source": "cfg_node_VulnerableBank_canWithdraw_5",
+      "target": "cfg_node_VulnerableBank_canWithdraw_6"
+    }
+  ]
+}

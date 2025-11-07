@@ -1,0 +1,15 @@
+{
+  "contract_name": "VulnerableBank",
+  "contract_path": "test_contracts\\VulnerableBank.sol",
+  "source_lines": 84,
+  "generation_timestamp": "2025-11-07T11:41:11.388741",
+  "has_ast": true,
+  "has_cfg": true,
+  "has_dfg": true,
+  "ast_nodes": 28,
+  "ast_edges": 27,
+  "cfg_nodes": 44,
+  "cfg_edges": 44,
+  "dfg_nodes": 62,
+  "dfg_edges": 69
+}
